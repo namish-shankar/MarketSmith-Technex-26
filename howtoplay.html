@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Play | MARKETSMITH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-darker: #0f051d;
+            --bg-dark: #1a0b2e;
+            --accent-yellow: #ffd700;
+            --panel-white: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            /* Match the left-to-right gradient of the main pages */
+            background: linear-gradient(to right, #2d1354, #0f051d);
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: var(--panel-white);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Bungee', cursive;
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: 'Algerian', serif;
+            color: var(--accent-yellow);
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            padding: 12px 20px;
+            background-color: rgba(255, 215, 0, 0.1); /* Subtle yellow tint */
+            border-left: 5px solid var(--accent-yellow);
+            border-radius: 4px;
+            color: var(--accent-yellow);
+            font-family: 'Algerian', serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: none; /* Custom markers */
+        }
+
+        li {
+            margin-bottom: 18px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+        }
+
+        /* Custom bullet points */
+        li::before {
+            content: "•";
+            color: var(--accent-yellow);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        strong {
+            color: var(--accent-yellow);
+        }
+
+        /* Scrollbar styling to match the theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-darker);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a2b9d;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-yellow);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>HOW TO PLAY</h1>
+    <div class="subtitle">
+        MARKETSMITH
+    </div>
+
+    <h2>Interface</h2>
+    <ul>
+        <li>All registered players will be divided into groups of six.</li>
+        <li>One common playing table will be shared among players of the group.</li>
+        <li>All players on the table can view the current question along with the holdings and PnL of other players.</li>
+    </ul>
+
+    <h2>Game Framework</h2>
+    <ul>
+        <li>Six digits (1-9) are generated at the start of each round.</li>
+        <li>The digits remain unrevealed throughout the round.</li>
+        <li>The PnL of every player at the start of the round will be set to zero.</li>
+    </ul>
+
+    <h2>Question Phase</h2>
+    <ul>
+        <li>One question appears on the dashboard at the start of every turn.</li>
+        <li>The correct answer corresponds to the digit for that turn.</li>
+        <li>Players must keep answers to themselves.</li>
+    </ul>
+
+    <h2>Assets & Ownership</h2>
+    <ul>
+        <li>The value of one asset equals the <strong>sum of all six digits</strong>.</li>
+        <li>Each player starts with 2 assets.</li>
+        <li>An additional asset is given after the third turn.</li>
+        <li>There is no limit on maximum holdings per player.</li>
+    </ul>
+
+    <h2>Trading Rules</h2>
+    <ul>
+        <li>Players may quote bid and/or ask prices after solving the question in the 30-second window.</li>
+        <li>The orders set by players must be of one asset.</li>
+        <li>A trade is executed when bid and ask of two players are met.</li>
+    </ul>
+
+    <h2>Trading Logic</h2>
+    <ul>
+        <li>If the highest bid is less than the lowest ask, no trades will be executed.</li>
+        <li>If the highest bid is higher than the lowest ask, trades will be executed at the ask price.</li>
+        <li>Orders are matched from best bid and best ask outward.</li>
+        <li>In case of a tie, the player booking the order first will be given priority.</li>
+        <li>No money is kept by the dealer (sum of all players’ PnL is always zero).</li>
+    </ul>
+
+    <h2>End of Round</h2>
+    <ul>
+        <li>True asset value is revealed.</li>
+        <li>Final wealth = cash + asset valuation.</li>
+        <li>Players are ranked by total profit.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

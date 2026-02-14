@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARKETSMITH | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-3d-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="login-header-simple">
+        <div class="header-content-simple">
+            <img src="logo.png" alt="Logo" class="main-logo-img">
+            <img src="logo2.png" alt="Logo" class="secondary-logo-img">
+        </div>
+    </header>
+
+    <main class="content-wrapper-center">
+        <h1 class="hero-title-main">MARKETSMITH</h1>
+
+        <div class="login-card-glass">
+            <h2>Participant Login</h2>
+            <form id="loginForm">
+                <div class="input-field-custom">
+                    <label>Email ID</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-field-custom">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-submit-btn">Login</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="single-line-footer">
+        <span class="foot-txt">📞 +91 99608 70886</span>
+        <span class="foot-txt">📞 +91 79921 79759</span>
+        <a href="https://www.technex.in/" target="_blank" class="foot-link">Visit our website</a>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').onsubmit = (e) => {
+            e.preventDefault();
+            window.location.href = 'home.html';
+        };
+    </script>
+</body>
+</html>
